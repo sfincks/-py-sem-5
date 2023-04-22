@@ -7,3 +7,9 @@
 a = int(input("Введите число A: "))
 b = int(input("Введите число B: "))
 
+def multiplier (a, b): 
+    if b == 1: 
+        return a   
+    return a * multiplier(a,b-1)
+
+print(multiplier(a,b))
