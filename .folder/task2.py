@@ -4,3 +4,21 @@
 # Также нельзя использовать циклы.
 # 2 2
 # 4
+
+
+a = int(input("Введите число A: "))
+b = int(input("Введите число B: "))
+
+
+def rek_sum(a, b):
+    if a > b:
+        if b == 0:
+            return a
+        return 1 + rek_sum(a, b - 1)
+    else:
+        if a == 0:
+            return b
+        return 1 + rek_sum(a - 1, b)
+
+
+print(rek_sum(a, b))
